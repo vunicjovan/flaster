@@ -80,6 +80,9 @@ class Builder:
                 file_content="\n",
             )
 
+            # Build subpackage directories on the package root path
+            [os.mkdir(f"{PACKAGE_ROOT}/{subpackage}") for subpackage in subpackages]
+
         # Build files on the project root path
         for root_file, file_extension in self.root_files.items():
             self._build_file(

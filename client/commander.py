@@ -28,6 +28,7 @@ class Commander:
 
         [
             self.parser.add_argument(
+                f"-{a[0]}",
                 f"--{a}",
                 help=d.get("help"),
                 nargs=d.get("nargs"),
